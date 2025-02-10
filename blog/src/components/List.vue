@@ -1,12 +1,10 @@
 // 링크를 연결했으니 
 // 클릭한 요소의 index 번호의 
 // 요소를 보여줄 수 있도록 해야함
-
 <template>
-  <!-- v-for="(blog, index) in blog" :key="index" -->
   <div class="blog-archive" v-for="(blog,i) in blog" :key="i">
-    <h5 @click="clicked = i; console.log(clicked)">
-        <router-link to='/detail'>
+    <h5 @click="clicked = i;">
+        <router-link :to="'/detail/' + i">
             {{blog.title}}
         </router-link>
     </h5> 

@@ -2,8 +2,10 @@ import { createWebHistory, createRouter } from "vue-router";
 import List from './components/List.vue';
 import blogMain from './components/blogMain.vue';
 import Detail from './components/Detail.vue';
+import NoFind from "./components/NoFind.vue";
 
 const routes = [
+  // 라우트 순서에 따라 중요도가 달라짐 (위에 있을 수록 우선도 ^)
   {
     path: "/list",
     component: List,
@@ -13,8 +15,13 @@ const routes = [
     component : blogMain,
   },
   {
-    path : "/detail/:id",
+    path : "/detail/:id(\\d+)", // 숫자만
+    // path : "/detail/:id",
     component : Detail,
+  },
+  {
+    path : "/:anything",
+    component : NoFind,
   }
 ];
 

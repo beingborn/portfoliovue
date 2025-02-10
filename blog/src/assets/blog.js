@@ -15,5 +15,11 @@ export default [
       content : '거리를 설정하면 가장 가까운 파이터를 소개해드려요! 서로 싸워보세요',
       date : 'April 24, 2019',
       number : 2
+    },
+    { 
+      title : '세계 최고 김치를 찾아라',
+      content : '김치맨 파이터',
+      date : 'April 24, 2019',
+      number : 2
     }
 ]

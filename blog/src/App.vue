@@ -36,21 +36,22 @@
     </div>
     </nav>
 
-    <!-- <div class="container mt-4">
+    <div class="container mt-4">
         <h5>프론트엔드 vue 시작하기</h5>
         <p>Vue.js</p>
-    </div> -->
+    </div>
     <router-link to="/list">리스트 페이지</router-link>
     <router-link to="/blogmain">블로그 메인</router-link>
     <router-view :blog="blog"></router-view>
+    
 
-    <!-- <List v-bind:blog="blog"/> -->
-  
+    <PageFooter/>
 </template>
 
 <script>
 
 import blog from './assets/blog'
+import PageFooter from '@/components/PageFooter'
 // import List from './components/List.vue'
 
 export default {
@@ -61,6 +62,7 @@ export default {
     }
   },
   components: {
+    PageFooter : PageFooter
     // List: List
   }
 }
@@ -72,4 +74,30 @@ export default {
     margin: 0;
     padding: 0;
   }
+
+  a {
+    text-decoration: none!important;
+  }
+
+  body {
+    font-family: "KoPubDotum", sans-serif!important;
+  }
+
+  @font-face {
+    font-family: KoPubDotum;
+    font-weight: 300;
+    src: url("./assets/fonts/KoPubWorld-Dotum-Light.woff") format("woff")
+  }
+    @font-face {
+    font-family: KoPubDotum;
+    font-weight: 500;
+    src: url("./assets/fonts/KoPubWorld-Dotum-Medium.woff") format("woff")
+  }
+  @font-face {
+  font-family: KoPubDotum;
+  font-weight: 700;
+    src: 
+      url("./assets/fonts/KoPubWorld-Dotum-Bold.woff") format("woff"),
+  }
+
 </style>
