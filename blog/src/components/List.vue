@@ -3,11 +3,16 @@
 // 요소를 보여줄 수 있도록 해야함
 <template>
   <div class="blog-archive" v-for="(blog,i) in blog" :key="i">
-    <h5 @click="clicked = i;">
+    <h4 @click="$router.go(-1)">gd</h4>
+
+    <h5 @click="$router.push(`/detail/${i}`)">
+        {{ blog.title }}
+    </h5>
+    <!-- <h5 @click="clicked = i;">
         <router-link :to="'/detail/' + i">
             {{blog.title}}
         </router-link>
-    </h5> 
+    </h5>  -->
     <p>{{blog.date}}</p>
   </div>
 </template>

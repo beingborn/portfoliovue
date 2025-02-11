@@ -82,7 +82,7 @@ export default {
   body {
     font-family: "KoPubDotum", sans-serif!important;
   }
-
+  
   @font-face {
     font-family: KoPubDotum;
     font-weight: 300;
